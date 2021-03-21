@@ -51,7 +51,11 @@ const productSchema = mongoose.Schema({
     isFeatured: {
         type: Boolean,
         default: false,
-    }
+    },
+    dateCreated: {
+        type: Date,
+        default: Date.now,
+    },
 })
 
 exports.Product = mongoose.model('Product', productSchema);
